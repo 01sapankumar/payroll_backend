@@ -1,0 +1,11 @@
+import { Router } from 'express';
+import { createEmployee, listEmployees, getEmployee, updateEmployee, deleteEmployee } from '../controllers/employee.controller.js';
+import { requireAdmin } from '../middleware/auth.js';
+const r = Router();
+r.use(requireAdmin);
+r.post('/', createEmployee);
+r.get('/', listEmployees);
+r.get('/:id', getEmployee);
+r.put('/:id', updateEmployee);
+r.delete('/:id', deleteEmployee);
+export default r;
