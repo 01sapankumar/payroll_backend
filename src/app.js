@@ -15,6 +15,7 @@ import componentRoutes from './routes/employee.routes.js'
 import leaveRoutes from './routes/leave.routes.js';
 import attendanceRoutes from './routes/attendance.routes.js';
 import holidayRoutes from './routes/holiday.routes.js';
+import payrollRoutes from './routes/payroll.routes.js';
 
 import { notFound, errorHandler } from './middleware/error.js';
 
@@ -36,6 +37,7 @@ app.use('/api/components', componentRoutes);
 app.use('/api/leaves', leaveRoutes);
 app.use('/api/attendance', attendanceRoutes);
 app.use('/api/holidays', holidayRoutes);
+app.use('/api/payroll', payrollRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

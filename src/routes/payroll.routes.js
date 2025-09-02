@@ -5,7 +5,7 @@ const r = Router();
 r.use(requireAdmin);
 r.get('/preview', preview); // /api/payroll/preview?year=2025&month=8&employeeId=...
 r.post('/runs', createRun); // creates draft
-nr.patch('/runs/:id/lock', lockRun);
++ r.patch('/runs/:id/lock', lockRun);
 r.post('/runs/:id/payslips', generatePayslips);
 r.get('/runs', listRuns);
 export default r;
