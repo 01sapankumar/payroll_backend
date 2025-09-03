@@ -14,6 +14,8 @@ import attendanceRoutes from './routes/attendance.routes.js';
 import holidayRoutes from './routes/holiday.routes.js';
 import payrollRoutes from './routes/payroll.routes.js';
 
+
+
 import { notFound, errorHandler } from './middleware/error.js';
 
 const app = express();
@@ -40,6 +42,8 @@ app.use('/api/leaves', leaveRoutes);
 app.use('/api/attendance', attendanceRoutes);
 app.use('/api/holidays', holidayRoutes);
 app.use('/api/payroll', payrollRoutes);
+
+
 
 // 404 & error handlers
 app.use(notFound);
